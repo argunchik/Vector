@@ -15,6 +15,12 @@ public class SpawnPowers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int numberPowers=GameObject.FindGameObjectsWithTag("Dollar").Length;
+        int numberPowers=GameObject.FindGameObjectsWithTag("PowerUp").Length;
+        print(numberPowers);
+        print(motio.hasPowerUp);
+        if (numberPowers<1 && motio.hasPowerUp==false)
+        {
+            Instantiate(powerPrefab);
+        }
     }
 }

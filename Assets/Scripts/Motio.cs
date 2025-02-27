@@ -81,7 +81,9 @@ public class Motio : MonoBehaviour
     {
         if (other.gameObject.tag=="PowerUp")
         {
-            Destroy(other.gameObject);
+            GameObject PowerChild=other.gameObject;
+            GameObject PowerParent=PowerChild.transform.parent.gameObject;
+            Destroy(PowerParent);
             transform.localScale=new Vector3(5,5,5);
             hasPowerUp=true;
             _border=Instantiate(Borders,Borders.transform.position,Borders.transform.rotation);
