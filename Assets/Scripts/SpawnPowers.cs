@@ -15,7 +15,6 @@ public class SpawnPowers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int numberPowers=GameObject.FindGameObjectsWithTag("Dollar");
-        
+        int numberPowers=GameObject.FindGameObjectsWithTag("Dollar").Length;
     }
 }
